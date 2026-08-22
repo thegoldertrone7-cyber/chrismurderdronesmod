@@ -33,7 +33,7 @@ public class PlushieBlockEntity extends BlockEntity {
     private int skinIndex = 0;
 
     // ── Murder Drones ────────────────────────────────────────────────────────
-    public static final int UZI_SKIN_COUNT     = 3;
+    public static final int UZI_SKIN_COUNT     = 4;
     public static final int N_SKIN_COUNT       = 5;
     public static final int V_SKIN_COUNT       = 5;
     public static final int J_SKIN_COUNT       = 6;

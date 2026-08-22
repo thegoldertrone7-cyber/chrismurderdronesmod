@@ -83,7 +83,7 @@ public class ModBlocksRenderer implements BlockEntityRenderer<PlushieBlockEntity
         poseStack.translate(-0.5D, 0.0D, -0.5D);
 
         // Pass 1: normal render with world lighting
-        VertexConsumer normal = buffer.getBuffer(Sheets.cutoutBlockSheet());
+        VertexConsumer normal = buffer.getBuffer(Sheets.translucentCullBlockSheet());
         blockRenderer.getModelRenderer().renderModel(
                 poseStack.last(), normal, state, model,
                 1.0F, 1.0F, 1.0F, packedLight, OverlayTexture.NO_OVERLAY);
