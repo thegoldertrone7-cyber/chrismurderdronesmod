@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDP",
+		"IMI",
+		"WBW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:white_wool"
+		},
+		"B": {
+			"item": "minecraft:bow"
+		},
+		"P": {
+			"item": "minecraft:purple_dye"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"D": [
+			{
+				"tag": "minecraft:creeper_drop_music_discs"
+			}
+		]
+	},
+	"result": {
+		"id": "chrismurderdronesmod:uzi",
+		"count": 1
+	}
+}

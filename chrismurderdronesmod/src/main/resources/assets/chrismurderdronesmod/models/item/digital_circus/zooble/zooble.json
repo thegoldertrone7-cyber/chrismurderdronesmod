@@ -1,0 +1,23 @@
+{
+  "parent": "chrismurderdronesmod:block/digital_circus/zooble/zooble",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "chrismurderdronesmod:item/digital_circus/zooble/zooble_alt1"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "chrismurderdronesmod:item/digital_circus/zooble/zooble_alt2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "chrismurderdronesmod:item/digital_circus/zooble/zooble_alt3"
+    }
+  ]
+}

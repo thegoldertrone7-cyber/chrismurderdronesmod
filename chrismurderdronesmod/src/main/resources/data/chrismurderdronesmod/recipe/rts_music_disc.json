@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PD ",
+		"DMD",
+		" DW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:blue_dye"
+		},
+		"P": {
+			"item": "minecraft:red_dye"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:caine"
+		},
+		"D": {
+			"item": "minecraft:brown_terracotta"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:rts_music_disc",
+		"count": 1
+	}
+}

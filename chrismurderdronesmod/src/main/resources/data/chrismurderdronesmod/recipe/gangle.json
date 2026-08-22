@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDP",
+		"IMI",
+		"WIW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:string"
+		},
+		"P": {
+			"item": "minecraft:ghast_tear"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:red_dye"
+		},
+		"D": {
+			"item": "minecraft:white_terracotta"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:gangle",
+		"count": 1
+	}
+}

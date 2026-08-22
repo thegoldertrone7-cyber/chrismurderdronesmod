@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"WFW",
+		"WMW",
+		"BFB"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:white_wool"
+		},
+		"B": {
+			"item": "minecraft:bone"
+		},
+		"F": {
+			"item": "minecraft:rotten_flesh"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:tessa",
+		"count": 1
+	}
+}

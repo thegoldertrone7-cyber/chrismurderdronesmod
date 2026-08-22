@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PTP",
+		"IMI",
+		"RRR"
+	],
+	"key": {
+		"R": {
+			"item": "minecraft:red_wool"
+		},
+		"P": {
+			"item": "minecraft:pink_dye"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"T": {
+			"item": "minecraft:white_terracotta"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:lizzie",
+		"count": 1
+	}
+}

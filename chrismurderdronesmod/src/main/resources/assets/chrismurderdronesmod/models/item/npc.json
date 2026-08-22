@@ -1,0 +1,19 @@
+{
+  "parent": "chrismurderdronesmod:item/digital_circus/npc/npc",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt2" },
+    { "predicate": { "custom_model_data": 3 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt3" },
+    { "predicate": { "custom_model_data": 4 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt4" },
+    { "predicate": { "custom_model_data": 5 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt5" },
+    { "predicate": { "custom_model_data": 6 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt6" },
+    { "predicate": { "custom_model_data": 7 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt7" },
+    { "predicate": { "custom_model_data": 8 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt8" },
+    { "predicate": { "custom_model_data": 9 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt9" },
+    { "predicate": { "custom_model_data": 10 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt10" },
+    { "predicate": { "custom_model_data": 11 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt11" },
+    { "predicate": { "custom_model_data": 12 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt12" },
+    { "predicate": { "custom_model_data": 13 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt13" },
+    { "predicate": { "custom_model_data": 14 }, "model": "chrismurderdronesmod:item/digital_circus/npc/npc_alt14" }
+  ]
+}

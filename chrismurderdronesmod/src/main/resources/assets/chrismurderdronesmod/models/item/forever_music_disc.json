@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "chrismurderdronesmod:item/forever_music_disc"
+  }
+}

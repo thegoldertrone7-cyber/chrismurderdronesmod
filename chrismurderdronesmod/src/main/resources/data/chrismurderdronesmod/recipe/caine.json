@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDP",
+		"IMI",
+		"WBR"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:blue_dye"
+		},
+		"B": {
+			"item": "minecraft:comparator"
+		},
+		"P": {
+			"item": "minecraft:ender_eye"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:string"
+		},
+		"D": {
+			"item": "minecraft:red_wool"
+		},
+		"R": {
+			"item": "minecraft:red_dye"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:caine",
+		"count": 1
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDN",
+		"DMD",
+		"NDJ"
+	],
+	"key": {
+		"P": {
+			"item": "chrismurderdronesmod:uzi"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:cynessa"
+		},
+		"N": {
+			"item": "chrismurderdronesmod:n"
+		},
+		"D": {
+			"item": "minecraft:red_terracotta"
+		},
+		"J": {
+			"item": "chrismurderdronesmod:j"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:bm_music_disc",
+		"count": 1
+	}
+}

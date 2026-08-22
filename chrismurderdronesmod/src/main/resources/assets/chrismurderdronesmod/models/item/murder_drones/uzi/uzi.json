@@ -1,0 +1,17 @@
+{
+  "parent": "chrismurderdronesmod:block/murder_drones/uzi/uzi",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "chrismurderdronesmod:item/murder_drones/uzi/uzi_alt1"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "chrismurderdronesmod:item/murder_drones/uzi/uzi_alt2"
+    }
+  ]
+}

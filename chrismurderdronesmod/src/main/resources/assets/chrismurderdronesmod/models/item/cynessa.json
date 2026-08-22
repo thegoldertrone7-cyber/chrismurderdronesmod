@@ -1,0 +1,6 @@
+{
+  "parent": "chrismurderdronesmod:item/murder_drones/cynessa/cynessa",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1 }, "model": "chrismurderdronesmod:item/murder_drones/cynessa/cynessa_alt1" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "chrismurderdronesmod:item/digital_circus/jax/jax",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt2" },
+    { "predicate": { "custom_model_data": 3 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt3" },
+    { "predicate": { "custom_model_data": 4 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt4" },
+    { "predicate": { "custom_model_data": 5 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt5" },
+    { "predicate": { "custom_model_data": 6 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt6" },
+    { "predicate": { "custom_model_data": 7 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt7" },
+    { "predicate": { "custom_model_data": 8 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt8" },
+    { "predicate": { "custom_model_data": 9 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt9" },
+    { "predicate": { "custom_model_data": 10 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt10" },
+    { "predicate": { "custom_model_data": 11 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt11" },
+    { "predicate": { "custom_model_data": 12 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt12" },
+    { "predicate": { "custom_model_data": 13 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt13" },
+    { "predicate": { "custom_model_data": 14 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt14" },
+    { "predicate": { "custom_model_data": 15 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt15" },
+    { "predicate": { "custom_model_data": 16 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt16" },
+    { "predicate": { "custom_model_data": 17 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt17" },
+    { "predicate": { "custom_model_data": 18 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt18" },
+    { "predicate": { "custom_model_data": 19 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt19" },
+    { "predicate": { "custom_model_data": 20 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt20" },
+    { "predicate": { "custom_model_data": 21 }, "model": "chrismurderdronesmod:item/digital_circus/jax/jax_alt21" }
+  ]
+}
