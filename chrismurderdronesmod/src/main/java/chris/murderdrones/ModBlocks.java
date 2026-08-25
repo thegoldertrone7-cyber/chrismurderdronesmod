@@ -44,6 +44,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -108,6 +109,23 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NPC_BLOCK     = registerPlushie("npc");
     public static final DeferredBlock<Block> BUBBLE_BLOCK  = registerPlushie("bubble");
 
+    // ── Plushie Base ─────────────────────────────────────────────────────────
+    // One single block that can hold ANY character (see PlushieBaseBlockEntity),
+    // placed pixel-perfect instead of the always-centered per-character blocks above.
+    public static final DeferredBlock<Block> PLUSHIE_BASE_BLOCK = BLOCKS.register("plushie_base",
+            () -> new PlushieBaseBlock(BlockBehaviour.Properties.of()
+                    .destroyTime(0.5f)
+                    .explosionResistance(0.5f)
+                    .noOcclusion()
+                    .sound(SoundType.WOOD)));
+
+    public static final DeferredItem<net.minecraft.world.item.Item> PLUSHIE_BASE_ITEM =
+            ChrisMurderDronesMod.ITEMS.register("plushie_base",
+                    () -> new BlockItem(PLUSHIE_BASE_BLOCK.get(), new net.minecraft.world.item.Item.Properties()));
+    public static final Supplier<BlockEntityType<PlushieBaseBlockEntity>> PLUSHIE_BASE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("plushie_base_tile",
+                    () -> BlockEntityType.Builder.of(PlushieBaseBlockEntity::new, PLUSHIE_BASE_BLOCK.get()).build(null));
+
     // ── Item registrations ────────────────────────────────────────────────────
     public static final DeferredItem<BlockItem> UZI_BLOCK_ITEM     = registerPlushieItem("uzi",     UZI_BLOCK);
     public static final DeferredItem<BlockItem> N_BLOCK_ITEM       = registerPlushieItem("n",       N_BLOCK);
@@ -129,6 +147,38 @@ public class ModBlocks {
     public static final DeferredItem<BlockItem> CAINE_BLOCK_ITEM   = registerPlushieItem("caine",   CAINE_BLOCK);
     public static final DeferredItem<BlockItem> NPC_BLOCK_ITEM     = registerPlushieItem("npc",     NPC_BLOCK);
     public static final DeferredItem<BlockItem> BUBBLE_BLOCK_ITEM  = registerPlushieItem("bubble",  BUBBLE_BLOCK);
+
+    // Single id -> item lookup, replacing the two separate hand-written switches
+    // that used to live in getDrops() and PlushieBrowserOpener. Add a line here
+    // (next to its registerPlushieItem call above) whenever a new character is added.
+    private static final Map<String, DeferredItem<BlockItem>> ITEMS_BY_ID = new LinkedHashMap<>();
+    static {
+        ITEMS_BY_ID.put("uzi", UZI_BLOCK_ITEM);
+        ITEMS_BY_ID.put("n", N_BLOCK_ITEM);
+        ITEMS_BY_ID.put("v", V_BLOCK_ITEM);
+        ITEMS_BY_ID.put("j", J_BLOCK_ITEM);
+        ITEMS_BY_ID.put("cyn", CYN_BLOCK_ITEM);
+        ITEMS_BY_ID.put("cynessa", CYNESSA_BLOCK_ITEM);
+        ITEMS_BY_ID.put("doll", DOLL_BLOCK_ITEM);
+        ITEMS_BY_ID.put("khan", KHAN_BLOCK_ITEM);
+        ITEMS_BY_ID.put("lizzie", LIZZIE_BLOCK_ITEM);
+        ITEMS_BY_ID.put("teacher", TEACHER_BLOCK_ITEM);
+        ITEMS_BY_ID.put("tessa", TESSA_BLOCK_ITEM);
+        ITEMS_BY_ID.put("pomni", POMNI_BLOCK_ITEM);
+        ITEMS_BY_ID.put("jax", JAX_BLOCK_ITEM);
+        ITEMS_BY_ID.put("ragatha", RAGATHA_BLOCK_ITEM);
+        ITEMS_BY_ID.put("gangle", GANGLE_BLOCK_ITEM);
+        ITEMS_BY_ID.put("zooble", ZOOBLE_BLOCK_ITEM);
+        ITEMS_BY_ID.put("kinger", KINGER_BLOCK_ITEM);
+        ITEMS_BY_ID.put("caine", CAINE_BLOCK_ITEM);
+        ITEMS_BY_ID.put("npc", NPC_BLOCK_ITEM);
+        ITEMS_BY_ID.put("bubble", BUBBLE_BLOCK_ITEM);
+    }
+
+    /** Looks up a character's plushie item by its registry id (e.g. "uzi"). Falls back to Uzi if unknown. */
+    public static DeferredItem<BlockItem> itemFor(String id) {
+        return ITEMS_BY_ID.getOrDefault(id, UZI_BLOCK_ITEM);
+    }
 
     // ── Block entity registrations ────────────────────────────────────────────
     public static final Supplier<BlockEntityType<PlushieBlockEntity>> UZI_BLOCK_ENTITY =
@@ -173,55 +223,20 @@ public class ModBlocks {
             BLOCK_ENTITIES.register("bubble_tile",  () -> BlockEntityType.Builder.of(PlushieBlockEntity::new, BUBBLE_BLOCK.get()).build(null));
 
     // ── Voiceline arrays per character ────────────────────────────────────────
+    // Looked up by naming convention ("<id>_voicelineN") against PlushieCharacters'
+    // voicelineCount, instead of a hand-written switch — see PlushieCharacters.java
+    // for how to add/adjust a character's voiceline count.
     public static SoundEvent[] getVoicelines(String character) {
-        return switch (character) {
-            case "uzi"     -> new SoundEvent[]{ ModSounds.UZI_VOICELINE1.get(),     ModSounds.UZI_VOICELINE2.get(),     ModSounds.UZI_VOICELINE3.get(),     ModSounds.UZI_VOICELINE4.get(),     ModSounds.UZI_VOICELINE5.get() };
-            case "n"       -> new SoundEvent[]{ ModSounds.N_VOICELINE1.get(),       ModSounds.N_VOICELINE2.get(),       ModSounds.N_VOICELINE3.get(),       ModSounds.N_VOICELINE4.get(),       ModSounds.N_VOICELINE5.get() };
-            case "v"       -> new SoundEvent[]{ ModSounds.V_VOICELINE1.get(),       ModSounds.V_VOICELINE2.get(),       ModSounds.V_VOICELINE3.get(),       ModSounds.V_VOICELINE4.get(),       ModSounds.V_VOICELINE5.get() };
-            case "j"       -> new SoundEvent[]{ ModSounds.J_VOICELINE1.get(),       ModSounds.J_VOICELINE2.get(),       ModSounds.J_VOICELINE3.get(),       ModSounds.J_VOICELINE4.get() };
-            case "cyn"     -> new SoundEvent[]{ ModSounds.CYN_VOICELINE1.get(),     ModSounds.CYN_VOICELINE2.get(),     ModSounds.CYN_VOICELINE3.get(),     ModSounds.CYN_VOICELINE4.get(),     ModSounds.CYN_VOICELINE5.get() };
-            case "cynessa" -> new SoundEvent[]{ ModSounds.CYNESSA_VOICELINE1.get(), ModSounds.CYNESSA_VOICELINE2.get(), ModSounds.CYNESSA_VOICELINE3.get(), ModSounds.CYNESSA_VOICELINE4.get(), ModSounds.CYNESSA_VOICELINE5.get() };
-            case "doll"    -> new SoundEvent[]{ ModSounds.DOLL_VOICELINE1.get(),    ModSounds.DOLL_VOICELINE2.get(),    ModSounds.DOLL_VOICELINE3.get()};
-            case "khan"    -> new SoundEvent[]{ ModSounds.KHAN_VOICELINE1.get(),    ModSounds.KHAN_VOICELINE2.get(),    ModSounds.KHAN_VOICELINE3.get(),    ModSounds.KHAN_VOICELINE4.get(),    ModSounds.KHAN_VOICELINE5.get() };
-            case "lizzie"  -> new SoundEvent[]{ ModSounds.LIZZIE_VOICELINE1.get(),  ModSounds.LIZZIE_VOICELINE2.get(),  ModSounds.LIZZIE_VOICELINE3.get(),  ModSounds.LIZZIE_VOICELINE4.get(),  ModSounds.LIZZIE_VOICELINE5.get() };
-            case "teacher" -> new SoundEvent[]{ ModSounds.TEACHER_VOICELINE1.get(), ModSounds.TEACHER_VOICELINE2.get(), ModSounds.TEACHER_VOICELINE3.get(), ModSounds.TEACHER_VOICELINE4.get()};
-            case "tessa"   -> new SoundEvent[]{ ModSounds.TESSA_VOICELINE1.get(),   ModSounds.TESSA_VOICELINE2.get(),   ModSounds.TESSA_VOICELINE3.get(),   ModSounds.TESSA_VOICELINE4.get(),   ModSounds.TESSA_VOICELINE5.get() };
-            case "pomni"   -> new SoundEvent[]{ ModSounds.POMNI_VOICELINE1.get(),   ModSounds.POMNI_VOICELINE2.get(),   ModSounds.POMNI_VOICELINE3.get(),   ModSounds.POMNI_VOICELINE4.get(),   ModSounds.POMNI_VOICELINE5.get() };
-            case "jax"     -> new SoundEvent[]{ ModSounds.JAX_VOICELINE1.get(),     ModSounds.JAX_VOICELINE2.get(),     ModSounds.JAX_VOICELINE3.get(),     ModSounds.JAX_VOICELINE4.get() };
-            case "ragatha" -> new SoundEvent[]{ ModSounds.RAGATHA_VOICELINE1.get(), ModSounds.RAGATHA_VOICELINE2.get(), ModSounds.RAGATHA_VOICELINE3.get(), ModSounds.RAGATHA_VOICELINE4.get(), ModSounds.RAGATHA_VOICELINE5.get() };
-            case "gangle"  -> new SoundEvent[]{ ModSounds.GANGLE_VOICELINE1.get(),  ModSounds.GANGLE_VOICELINE2.get(),  ModSounds.GANGLE_VOICELINE3.get(),  ModSounds.GANGLE_VOICELINE4.get(),  ModSounds.GANGLE_VOICELINE5.get() };
-            case "zooble"  -> new SoundEvent[]{ ModSounds.ZOOBLE_VOICELINE1.get(),  ModSounds.ZOOBLE_VOICELINE2.get(),  ModSounds.ZOOBLE_VOICELINE3.get(),  ModSounds.ZOOBLE_VOICELINE4.get(),  ModSounds.ZOOBLE_VOICELINE5.get() };
-            case "kinger"  -> new SoundEvent[]{ ModSounds.KINGER_VOICELINE1.get(),  ModSounds.KINGER_VOICELINE2.get(),  ModSounds.KINGER_VOICELINE3.get(),  ModSounds.KINGER_VOICELINE4.get(),  ModSounds.KINGER_VOICELINE5.get() };
-            case "caine"   -> new SoundEvent[]{ ModSounds.CAINE_VOICELINE1.get(),   ModSounds.CAINE_VOICELINE2.get(),   ModSounds.CAINE_VOICELINE3.get(),   ModSounds.CAINE_VOICELINE4.get(),   ModSounds.CAINE_VOICELINE5.get() };
-            case "bubble"  -> new SoundEvent[]{ ModSounds.BUBBLE_VOICELINE1.get(),  ModSounds.BUBBLE_VOICELINE2.get(),  ModSounds.BUBBLE_VOICELINE3.get() };
-            case "npc"     -> new SoundEvent[]{ ModSounds.NPC_VOICELINE1.get(),     ModSounds.NPC_VOICELINE2.get(),     ModSounds.NPC_VOICELINE3.get(),     ModSounds.NPC_VOICELINE4.get() };
-            default        -> new SoundEvent[0];
-        };
+        PlushieCharacters.Character entry = PlushieCharacters.get(character);
+        if (entry == null) return new SoundEvent[0];
+        SoundEvent[] voicelines = new SoundEvent[entry.voicelineCount()];
+        for (int i = 0; i < entry.voicelineCount(); i++) {
+            ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
+                    ChrisMurderDronesMod.MODID, character + "_voiceline" + (i + 1));
+            voicelines[i] = net.minecraft.core.registries.BuiltInRegistries.SOUND_EVENT.get(id);
+        }
+        return voicelines;
     }
-
-    // ── Flavour text shown in item tooltips ───────────────────────────────────
-    private static final Map<String, String> FLAVOUR = Map.ofEntries(
-            Map.entry("uzi",     "BITE ME!"),
-            Map.entry("n",       "He's really trying his best, okay?"),
-            Map.entry("v",       "I still feel nothing."),
-            Map.entry("j",       "Efficiency rating: 97.3%."),
-            Map.entry("cyn",     "Big brother N."),
-            Map.entry("cynessa", "Lick."),
-            Map.entry("doll",    "Orphan."),
-            Map.entry("khan",    "Best dad on Copper-9."),
-            Map.entry("lizzie",  "Uzi is SO embarrassing."),
-            Map.entry("teacher", "Please read chapter four."),
-            Map.entry("tessa",   "Righty-O'."),
-            Map.entry("pomni",   "I need to get out of here!"),
-            Map.entry("jax",     "Get your Jax Toy"),
-            Map.entry("ragatha", "It's gonna be okay, I promise."),
-            Map.entry("gangle",  "WE NEED TO FIND THE TOMMY GUN"),
-            Map.entry("zooble",  "Are you afriad of corn?"),
-            Map.entry("kinger",  "I'm right behind you aren't I?"),
-            Map.entry("caine",   "Welcome to the Amazing Digital Circus!"),
-            Map.entry("npc",     "Just a regular NPC."),
-            Map.entry("bubble",  "Pop!")
-    );
 
     public static void spawnClickParticles(Level level, BlockPos pos) {
         if (!level.isClientSide) return;
@@ -302,28 +317,7 @@ public class ModBlocks {
 
         @Override
         public List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
-            DeferredItem<BlockItem> itemReg = switch (character) {
-                case "n"       -> N_BLOCK_ITEM;
-                case "v"       -> V_BLOCK_ITEM;
-                case "j"       -> J_BLOCK_ITEM;
-                case "cyn"     -> CYN_BLOCK_ITEM;
-                case "cynessa" -> CYNESSA_BLOCK_ITEM;
-                case "doll"    -> DOLL_BLOCK_ITEM;
-                case "khan"    -> KHAN_BLOCK_ITEM;
-                case "lizzie"  -> LIZZIE_BLOCK_ITEM;
-                case "teacher" -> TEACHER_BLOCK_ITEM;
-                case "tessa"   -> TESSA_BLOCK_ITEM;
-                case "pomni"   -> POMNI_BLOCK_ITEM;
-                case "jax"     -> JAX_BLOCK_ITEM;
-                case "ragatha" -> RAGATHA_BLOCK_ITEM;
-                case "gangle"  -> GANGLE_BLOCK_ITEM;
-                case "zooble"  -> ZOOBLE_BLOCK_ITEM;
-                case "kinger"  -> KINGER_BLOCK_ITEM;
-                case "caine"   -> CAINE_BLOCK_ITEM;
-                case "npc"     -> NPC_BLOCK_ITEM;
-                case "bubble"  -> BUBBLE_BLOCK_ITEM;
-                default        -> UZI_BLOCK_ITEM;
-            };
+            DeferredItem<BlockItem> itemReg = itemFor(character);
             ItemStack stack = new ItemStack(itemReg.get());
 
             BlockEntity be = params.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
@@ -384,24 +378,30 @@ public class ModBlocks {
             }
 
             BlockEntity beForCooldown = level.getBlockEntity(pos);
-            if (beForCooldown instanceof PlushieBlockEntity plushieForCooldown) {
-                if (plushieForCooldown.isVoicelineOnCooldown()) {
-                    return InteractionResult.CONSUME;
-                }
-                plushieForCooldown.startVoicelineCooldown(ServerConfig.VOICELINE_COOLDOWN_TICKS.get() * 50L);
+            if (beForCooldown instanceof PlushieBlockEntity plushieForCooldown
+                    && plushieForCooldown.isVoicelineOnCooldown()) {
+                return InteractionResult.CONSUME;
             }
 
-            if (!level.isClientSide) {
-                SoundEvent[] lines = getVoicelines(character);
-                if (lines.length > 0) {
-                    SoundEvent chosen = lines[level.random.nextInt(lines.length)];
+            SoundEvent[] lines = getVoicelines(character);
+            if (lines.length > 0) {
+                int lineIndex = level.random.nextInt(lines.length);
+                if (beForCooldown instanceof PlushieBlockEntity plushieForCooldown) {
+                    plushieForCooldown.startVoicelineCooldown(
+                            VoicelineDurations.getDurationMs(character, lineIndex));
+                }
+
+                if (!level.isClientSide) {
+                    SoundEvent chosen = lines[lineIndex];
                     // Genuine per-player distance fade instead of the old "volume as range
                     // multiplier" trick — see ModSoundUtil for why that trick clipped abruptly.
                     ModSoundUtil.playFadingSound((ServerLevel) level,
                             pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                             chosen, net.minecraft.sounds.SoundSource.BLOCKS, 1.0F);
                 }
-            } else {
+            }
+
+            if (level.isClientSide) {
                 BlockEntity be = level.getBlockEntity(pos);
                 if (be instanceof PlushieBlockEntity plushie) {
                     plushie.triggerJump();
@@ -432,6 +432,11 @@ public class ModBlocks {
             return ((PlushieBlock) getBlock()).getCharacter();
         }
 
+        /** Public accessor used by PlushieBaseBlock to identify which character this item attaches. */
+        public String getCharacter() {
+            return character();
+        }
+
         @Override
         public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
             ItemStack stack = player.getItemInHand(hand);
@@ -440,19 +445,26 @@ public class ModBlocks {
                 return InteractionResultHolder.pass(stack);
             }
 
-            if (!level.isClientSide) {
-                if (ServerConfig.ENABLE_HAND_VOICELINES.getAsBoolean()) {
-                    SoundEvent[] lines = getVoicelines(character());
-                    if (lines.length > 0) {
-                        SoundEvent chosen = lines[level.random.nextInt(lines.length)];
-                        ModSoundUtil.playFadingSound((ServerLevel) level,
-                                player.getX(), player.getY(), player.getZ(),
-                                chosen, net.minecraft.sounds.SoundSource.PLAYERS, 1.0F);
-                    }
+            SoundEvent[] lines = getVoicelines(character());
+            if (ServerConfig.ENABLE_HAND_VOICELINES.getAsBoolean() && lines.length > 0) {
+                // Picked on both sides identically-shaped (not networked), matching how
+                // ItemCooldowns already needs to run on both sides for the UI overlay to
+                // reflect what the server enforces underneath.
+                int lineIndex = level.random.nextInt(lines.length);
+                int durationMs = VoicelineDurations.getDurationMs(character(), lineIndex);
+                int durationTicks = Math.max(1, durationMs / 50);
+                player.getCooldowns().addCooldown(this, durationTicks);
+
+                if (!level.isClientSide) {
+                    SoundEvent chosen = lines[lineIndex];
+                    ModSoundUtil.playFadingSound((ServerLevel) level,
+                            player.getX(), player.getY(), player.getZ(),
+                            chosen, net.minecraft.sounds.SoundSource.PLAYERS, 1.0F);
                 }
+            } else {
+                player.getCooldowns().addCooldown(this, ServerConfig.VOICELINE_COOLDOWN_TICKS.get());
             }
 
-            player.getCooldowns().addCooldown(this, ServerConfig.VOICELINE_COOLDOWN_TICKS.get());
             return InteractionResultHolder.success(stack);
         }
 
@@ -480,7 +492,8 @@ public class ModBlocks {
                         .withStyle(Style.EMPTY.withColor(0x77DD77).withItalic(false)));
             }
 
-            String flavour = FLAVOUR.getOrDefault(ch, "A Murder Drones plushie.");
+            PlushieCharacters.Character charEntry = PlushieCharacters.get(ch);
+            String flavour = charEntry != null ? charEntry.flavourText() : "A Murder Drones plushie.";
             tooltip.add(Component.literal(flavour)
                     .withStyle(Style.EMPTY.withColor(0x55FFFF).withItalic(true)));
             tooltip.add(Component.literal("Right-click to squeeze  |  Sneak+place to put down")

@@ -6,7 +6,7 @@
 	"textures": {
 		"1": "chrismurderdronesmod:block/murder_drones/uzi/uzi_darkxwolf",
 		"2": "chrismurderdronesmod:block/murder_drones/uzi/uzi_x_hologram",
-		"particle": "chrismurderdronesmod:block/uzi_texture"
+		"particle": "chrismurderdronesmod:block/murder_drones/uzi/uzi_darkxwolf"
 	},
 	"elements": [
 		{

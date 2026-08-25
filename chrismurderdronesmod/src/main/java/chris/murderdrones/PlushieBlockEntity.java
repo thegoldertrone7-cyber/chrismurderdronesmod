@@ -32,64 +32,13 @@ public class PlushieBlockEntity extends BlockEntity {
 
     private int skinIndex = 0;
 
-    // ── Murder Drones ────────────────────────────────────────────────────────
-    public static final int UZI_SKIN_COUNT     = 4;
-    public static final int N_SKIN_COUNT       = 5;
-    public static final int V_SKIN_COUNT       = 5;
-    public static final int J_SKIN_COUNT       = 6;
-    public static final int CYN_SKIN_COUNT     = 3;
-    public static final int CYNESSA_SKIN_COUNT = 2;
-    public static final int DOLL_SKIN_COUNT    = 4;
-    public static final int KHAN_SKIN_COUNT    = 3;
-    public static final int LIZZIE_SKIN_COUNT  = 3;
-    public static final int TEACHER_SKIN_COUNT = 2;
-    public static final int TESSA_SKIN_COUNT   = 2;
-
-    // ── Digital Circus ───────────────────────────────────────────────────────
-    public static final int POMNI_SKIN_COUNT   = 13;
-    public static final int JAX_SKIN_COUNT     = 22;
-    public static final int RAGATHA_SKIN_COUNT = 13;
-    public static final int GANGLE_SKIN_COUNT  = 13;
-    public static final int ZOOBLE_SKIN_COUNT  = 9;
-    public static final int KINGER_SKIN_COUNT  = 11;
-    public static final int CAINE_SKIN_COUNT   = 6;
-    public static final int NPC_SKIN_COUNT     = 15;
-    public static final int BUBBLE_SKIN_COUNT  = 4;
-
     /**
-     * Every character in the mod has an explicit entry here — even the ones that
-     * currently only have a single (default) skin. That way "how many skins does
-     * X have" is always a one-line answer to look up and bump, instead of relying
-     * on characters silently falling through to a default of 1. If you add a new
-     * character block, add its constant above and its case here; until then it'll
-     * fall through to the default like everyone else used to.
+     * Skin count now lives in one place: {@link PlushieCharacters}. Add/rename
+     * skins there — this just reads whatever that registry says.
      */
     public static int getSkinCount(String character) {
-        return switch (character) {
-            // Murder Drones
-            case "uzi"     -> UZI_SKIN_COUNT;
-            case "n"       -> N_SKIN_COUNT;
-            case "v"       -> V_SKIN_COUNT;
-            case "j"       -> J_SKIN_COUNT;
-            case "cyn"     -> CYN_SKIN_COUNT;
-            case "cynessa" -> CYNESSA_SKIN_COUNT;
-            case "doll"    -> DOLL_SKIN_COUNT;
-            case "khan"    -> KHAN_SKIN_COUNT;
-            case "lizzie"  -> LIZZIE_SKIN_COUNT;
-            case "teacher" -> TEACHER_SKIN_COUNT;
-            case "tessa"   -> TESSA_SKIN_COUNT;
-            // Digital Circus
-            case "pomni"   -> POMNI_SKIN_COUNT;
-            case "jax"     -> JAX_SKIN_COUNT;
-            case "ragatha" -> RAGATHA_SKIN_COUNT;
-            case "gangle"  -> GANGLE_SKIN_COUNT;
-            case "zooble"  -> ZOOBLE_SKIN_COUNT;
-            case "kinger"  -> KINGER_SKIN_COUNT;
-            case "caine"   -> CAINE_SKIN_COUNT;
-            case "npc"     -> NPC_SKIN_COUNT;
-            case "bubble"  -> BUBBLE_SKIN_COUNT;
-            default        -> 1;
-        };
+        PlushieCharacters.Character entry = PlushieCharacters.get(character);
+        return entry != null ? entry.skinCount() : 1;
     }
 
     public static boolean hasSkins(String character) {

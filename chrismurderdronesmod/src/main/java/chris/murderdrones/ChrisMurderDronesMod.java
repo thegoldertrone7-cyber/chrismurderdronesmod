@@ -138,6 +138,7 @@ public class ChrisMurderDronesMod {
                         addItem(output, count, BM_MUSIC_DISC.get());
                         addItem(output, count, RTS_MUSIC_DISC.get());
                         addItem(output, count, FOREVER_MUSIC_DISC.get());
+                        addItem(output, count, ModBlocks.PLUSHIE_BASE_ITEM.get());
                     }).build());
 
     /**

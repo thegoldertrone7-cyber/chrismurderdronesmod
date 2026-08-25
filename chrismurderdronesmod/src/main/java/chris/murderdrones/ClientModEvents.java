@@ -34,6 +34,7 @@ public class ClientModEvents {
         event.registerBlockEntityRenderer(ModBlocks.CAINE_BLOCK_ENTITY.get(), ModBlocksRenderer::new);
         event.registerBlockEntityRenderer(ModBlocks.NPC_BLOCK_ENTITY.get(), ModBlocksRenderer::new);
         event.registerBlockEntityRenderer(ModBlocks.BUBBLE_BLOCK_ENTITY.get(), ModBlocksRenderer::new);
+        event.registerBlockEntityRenderer(ModBlocks.PLUSHIE_BASE_BLOCK_ENTITY.get(), PlushieBaseBlockEntityRenderer::new);
     }
 
     @SubscribeEvent
@@ -61,5 +62,8 @@ public class ClientModEvents {
                 ));
             }
         }
+
+        event.register(ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath(ChrisMurderDronesMod.MODID, "block/plushie_base")));
     }
 }

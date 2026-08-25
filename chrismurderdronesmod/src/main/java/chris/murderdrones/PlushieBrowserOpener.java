@@ -77,57 +77,26 @@ public class PlushieBrowserOpener {
         return BuiltInRegistries.ITEM.getKey(entry.item().get()).getPath();
     }
 
+    // Category accent colors — the character list itself now comes straight from
+    // PlushieCharacters, so adding a plushie to the catalog is just adding it there.
+    private static final int MURDER_DRONES_COLOR = 0xFF7A1F2B;
+    private static final int DIGITAL_CIRCUS_COLOR = 0xFF1F4F7A;
+
     private static List<PlushieCategory> buildCategories() {
         return List.of(
-                new PlushieCategory("Murder Drones", 0xFF7A1F2B, List.of(
-                        new CharacterEntry("Uzi", ModBlocks.UZI_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("uzi"),
-                                List.of("", "Prom", "PJ")),
-                        new CharacterEntry("N", ModBlocks.N_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("n"),
-                                List.of("", "Camper", "Dapper", "Manor", "PJ")),
-                        new CharacterEntry("V", ModBlocks.V_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("v"),
-                                List.of("", "Camper", "Prom", "Manor", "PJ")),
-                        new CharacterEntry("J", ModBlocks.J_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("j"),
-                                List.of("", "Manor", "Emotion Spilled Out", "Camper", "Prom", "PJ")),
-                        new CharacterEntry("Cyn", ModBlocks.CYN_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("cyn"),
-                                List.of("", "Disassembly Drone", "Freddy FazSuit")),
-                        new CharacterEntry("Cynessa", ModBlocks.CYNESSA_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("cynessa"),
-                                List.of("", "T-Rex")),
-                        new CharacterEntry("Doll", ModBlocks.DOLL_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("doll"),
-                                List.of("", "Prom", "Bandage", "Broken Eye")),
-                        new CharacterEntry("Khan", ModBlocks.KHAN_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("khan"),
-                                List.of("", "BALD", "Bowtie")),
-                        new CharacterEntry("Lizzie", ModBlocks.LIZZIE_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("lizzie"),
-                                List.of("", "Prom", "Camper")),
-                        new CharacterEntry("Teacher", ModBlocks.TEACHER_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("teacher"),
-                                List.of("", "Camper")),
-                        new CharacterEntry("Tessa", ModBlocks.TESSA_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("tessa"),
-                                List.of("", "Manor"))
-                )),
-                new PlushieCategory("Digital Circus", 0xFF1F4F7A, List.of(
-                        new CharacterEntry("Pomni", ModBlocks.POMNI_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("pomni"),
-                                List.of("", "Spudsy's", "Noir", "Running the Show", "Replacement Code", "Big Tops", "Big Tops Finale", "Possessed", "President", "Swimsuit", "Evil", "Anime", "Abstracted")),
-                        new CharacterEntry("Jax", ModBlocks.JAX_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("jax"),
-                                List.of("", "Spudsy's", "Noir", "Maid",
-                                        "Running the Show", "Shadow", "Trans", "Peeled", "Evil", "Pacher's Paradise", "Spring", "Anime", "Abstracted", "Blank", "Casual 1", "Casual 2", "Casual Hoodie", "Casual Jacket", "Swimsuit", "Military", "Static", "Bow")),
-                        new CharacterEntry("Ragatha", ModBlocks.RAGATHA_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("ragatha"),
-                                List.of("", "Spudsy's", "Noir", "Running the Show",
-                                        "Shadow", "Kitty Cat", "Full Bigtops", "Evil", "Bigtops", "Anime", "Beach", "Cowgirl", "Abstracted")),
-                        new CharacterEntry("Gangle", ModBlocks.GANGLE_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("gangle"),
-                                List.of("", "Spudsy's", "Noir", "Running the Show",
-                                        "Happy Mask", "New Zeland Extremist", "Anime", "Evil", "Beach", "EP 4 Mask", "Bigtops", "Kitty Cat", "Abstracted")),
-                        new CharacterEntry("Zooble", ModBlocks.ZOOBLE_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("zooble"),
-                                List.of("", "Spudsy's", "Noir", "Running the Show", "Bodyguard", "Anime", "Evil", "YIKES!", "Abstracted")),
-                        new CharacterEntry("Kinger", ModBlocks.KINGER_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("kinger"),
-                                List.of("", "Noir", "Bucket Hat", "Running the Show", "Coach Dictatorer", "Bigtops", "Beach", "Anime", "Queenie", "Kitty Cat", "Abstracted")),
-                        new CharacterEntry("Caine", ModBlocks.CAINE_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("caine"),
-                                List.of("", "Running the Show", "Shadow", "Eniac",
-                                        "Christmas", "Fisher")),
-                        new CharacterEntry("NPC", ModBlocks.NPC_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("npc"),
-                                List.of("", "Abel", "Red", "Orange",
-                                        "Yellow", "Lime", "Green", "Cyan", "Light Blue", "Blue", "Magenta", "Purple", "Pink", "Disapearing Guy", "Ming")),
-                        new CharacterEntry("Bubble", ModBlocks.BUBBLE_BLOCK_ITEM::get, PlushieBlockEntity.getSkinCount("bubble"),
-                                List.of("", "Floor", "Chef", "Video Cam"))
-                ))
+                buildCategory(PlushieCharacters.MURDER_DRONES, MURDER_DRONES_COLOR),
+                buildCategory(PlushieCharacters.DIGITAL_CIRCUS, DIGITAL_CIRCUS_COLOR)
         );
+    }
+
+    private static PlushieCategory buildCategory(String categoryName, int accentColor) {
+        List<CharacterEntry> entries = PlushieCharacters.inCategory(categoryName).stream()
+                .map(character -> new CharacterEntry(
+                        character.displayName(),
+                        ModBlocks.itemFor(character.id())::get,
+                        character.skinCount(),
+                        character.skinNames()))
+                .toList();
+        return new PlushieCategory(categoryName, accentColor, entries);
     }
 }
