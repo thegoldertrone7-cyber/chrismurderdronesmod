@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IGI",
+		"DMD",
+		"WWW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:gray_wool"
+		},
+		"G": {
+			"item": "minecraft:glass"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"D": {
+			"item": "minecraft:iron_door"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:khan",
+		"count": 1
+	}
+}

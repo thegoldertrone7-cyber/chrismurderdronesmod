@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDP",
+		"IMR",
+		"WBW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:black_wool"
+		},
+		"B": {
+			"item": "minecraft:light_blue_wool"
+		},
+		"P": {
+			"item": "minecraft:glass_bottle"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:warped_button"
+		},
+		"D": {
+			"item": "minecraft:red_dye"
+		},
+		"R": {
+			"item": "minecraft:iron_sword"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:ragatha",
+		"count": 1
+	}
+}

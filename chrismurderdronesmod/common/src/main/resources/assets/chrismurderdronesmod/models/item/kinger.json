@@ -1,0 +1,15 @@
+{
+  "parent": "chrismurderdronesmod:item/digital_circus/kinger/kinger",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt2" },
+    { "predicate": { "custom_model_data": 3 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt3" },
+    { "predicate": { "custom_model_data": 4 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt4" },
+    { "predicate": { "custom_model_data": 5 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt5" },
+    { "predicate": { "custom_model_data": 6 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt6" },
+    { "predicate": { "custom_model_data": 7 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt7" },
+    { "predicate": { "custom_model_data": 8 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt8" },
+    { "predicate": { "custom_model_data": 9 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt9" },
+    { "predicate": { "custom_model_data": 10 }, "model": "chrismurderdronesmod:item/digital_circus/kinger/kinger_alt10" }
+  ]
+}

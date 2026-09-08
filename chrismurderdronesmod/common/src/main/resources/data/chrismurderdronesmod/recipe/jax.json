@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PDP",
+		"IMI",
+		"WBW"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:yellow_dye"
+		},
+		"B": {
+			"item": "minecraft:pink_wool"
+		},
+		"P": {
+			"item": "minecraft:lead"
+		},
+		"M": {
+			"item": "chrismurderdronesmod:npc"
+		},
+		"I": {
+			"item": "minecraft:paper"
+		},
+		"D": {
+			"item": "minecraft:purple_wool"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:jax",
+		"count": 1
+	}
+}

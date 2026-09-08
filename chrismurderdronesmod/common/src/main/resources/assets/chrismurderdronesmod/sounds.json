@@ -1,0 +1,857 @@
+{
+	"uzi_voiceline1": {
+		"subtitle": "Uzi speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/uzi/uzi_biteme",
+				"stream": false
+			}
+		]
+	},
+	"uzi_voiceline2": {
+		"subtitle": "Uzi speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/uzi/uzi_holycrap",
+				"stream": false
+			}
+		]
+	},
+	"uzi_voiceline3": {
+		"subtitle": "Uzi speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/uzi/uzi_nareyouhigh",
+				"stream": false
+			}
+		]
+	},
+	"uzi_voiceline4": {
+		"subtitle": "Uzi speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/uzi/uzi_neattherapyfun",
+				"stream": false
+			}
+		]
+	},
+	"uzi_voiceline5": {
+		"subtitle": "Uzi speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/uzi/uzi_youdontownme",
+				"stream": false
+			}
+		]
+	},
+	"n_voiceline1": {
+		"subtitle": "N speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/n/n_didyouslapme",
+				"stream": false
+			}
+		]
+	},
+	"n_voiceline2": {
+		"subtitle": "N speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/n/n_ilovedoinganything",
+				"stream": false
+			}
+		]
+	},
+	"n_voiceline3": {
+		"subtitle": "N speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/n/n_spaceship",
+				"stream": false
+			}
+		]
+	},
+	"n_voiceline4": {
+		"subtitle": "N speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/n/n_handshake",
+				"stream": false
+			}
+		]
+	},
+	"n_voiceline5": {
+		"subtitle": "N speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/n/n_rumi",
+				"stream": false
+			}
+		]
+	},
+	"v_voiceline1": {
+		"subtitle": "V speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/v/v_love",
+				"stream": false
+			}
+		]
+	},
+	"v_voiceline2": {
+		"subtitle": "V speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/v/v_missile",
+				"stream": false
+			}
+		]
+	},
+	"v_voiceline3": {
+		"subtitle": "V speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/v/v_nothing",
+				"stream": false
+			}
+		]
+	},
+	"v_voiceline4": {
+		"subtitle": "V speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/v/v_rocks",
+				"stream": false
+			}
+		]
+	},
+	"v_voiceline5": {
+		"subtitle": "V speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/v/v_sabotage",
+				"stream": false
+			}
+		]
+	},
+	"j_voiceline1": {
+		"subtitle": "J speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/j/j_jcjensolproducts",
+				"stream": false
+			}
+		]
+	},
+	"j_voiceline2": {
+		"subtitle": "J speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/j/j_myself",
+				"stream": false
+			}
+		]
+	},
+	"j_voiceline3": {
+		"subtitle": "J speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/j/j_spoken",
+				"stream": false
+			}
+		]
+	},
+	"j_voiceline4": {
+		"subtitle": "J speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/j/j_tessa",
+				"stream": false
+			}
+		]
+	},
+	"j_voiceline5": {
+		"subtitle": "J speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/j/j_iwkwli",
+				"stream": false
+			}
+		]
+	},
+	"cyn_voiceline1": {
+		"subtitle": "Cyn speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cyn/cyn_annoyedexpression",
+				"stream": false
+			}
+		]
+	},
+	"cyn_voiceline2": {
+		"subtitle": "Cyn speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cyn/cyn_applesauce",
+				"stream": false
+			}
+		]
+	},
+	"cyn_voiceline3": {
+		"subtitle": "Cyn speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cyn/cyn_backups",
+				"stream": false
+			}
+		]
+	},
+	"cyn_voiceline4": {
+		"subtitle": "Cyn speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cyn/cyn_lightsip",
+				"stream": false
+			}
+		]
+	},
+	"cyn_voiceline5": {
+		"subtitle": "Cyn speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cyn/cyn_stab",
+				"stream": false
+			}
+		]
+	},
+	"cynessa_voiceline1": {
+		"subtitle": "Cynessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cynessa/cynessa_bow",
+				"stream": false
+			}
+		]
+	},
+	"cynessa_voiceline2": {
+		"subtitle": "Cynessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cynessa/cynessa_god",
+				"stream": false
+			}
+		]
+	},
+	"cynessa_voiceline3": {
+		"subtitle": "Cynessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cynessa/cynessa_lick",
+				"stream": false
+			}
+		]
+	},
+	"cynessa_voiceline4": {
+		"subtitle": "Cynessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cynessa/cynessa_okie",
+				"stream": false
+			}
+		]
+	},
+	"cynessa_voiceline5": {
+		"subtitle": "Cynessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/cynessa/cyn_snuckupon",
+				"stream": false
+			}
+		]
+	},
+	"doll_voiceline1": {
+		"subtitle": "Doll speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/doll/doll_dinner",
+				"stream": false
+			}
+		]
+	},
+	"doll_voiceline2": {
+		"subtitle": "Doll speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/doll/doll_stairs",
+				"stream": false
+			}
+		]
+	},
+	"doll_voiceline3": {
+		"subtitle": "Doll speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/doll/doll_v",
+				"stream": false
+			}
+		]
+	},
+	"khan_voiceline1": {
+		"subtitle": "Khan speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/khan/khan_cards",
+				"stream": false
+			}
+		]
+	},
+	"khan_voiceline2": {
+		"subtitle": "Khan speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/khan/khan_dead",
+				"stream": false
+			}
+		]
+	},
+	"khan_voiceline3": {
+		"subtitle": "Khan speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/khan/khan_door",
+				"stream": false
+			}
+		]
+	},
+	"khan_voiceline4": {
+		"subtitle": "Khan speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/khan/khan_hot",
+				"stream": false
+			}
+		]
+	},
+	"khan_voiceline5": {
+		"subtitle": "Khan speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/khan/khan_s",
+				"stream": false
+			}
+		]
+	},
+	"lizzie_voiceline1": {
+		"subtitle": "Lizzie speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/lizzie/lizzy_bestie",
+				"stream": false
+			}
+		]
+	},
+	"lizzie_voiceline2": {
+		"subtitle": "Lizzie speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/lizzie/lizzy_forgive",
+				"stream": false
+			}
+		]
+	},
+	"lizzie_voiceline3": {
+		"subtitle": "Lizzie speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/lizzie/lizzy_garbage",
+				"stream": false
+			}
+		]
+	},
+	"lizzie_voiceline4": {
+		"subtitle": "Lizzie speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/lizzie/lizzy_mean",
+				"stream": false
+			}
+		]
+	},
+	"lizzie_voiceline5": {
+		"subtitle": "Lizzie speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/lizzie/lizzy_mom",
+				"stream": false
+			}
+		]
+	},
+	"teacher_voiceline1": {
+		"subtitle": "Teacher speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/teacher/teacher_campers",
+				"stream": false
+			}
+		]
+	},
+	"teacher_voiceline2": {
+		"subtitle": "Teacher speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/teacher/teacher_sentiant",
+				"stream": false
+			}
+		]
+	},
+	"teacher_voiceline3": {
+		"subtitle": "Teacher speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/teacher/teacher_watermelon",
+				"stream": false
+			}
+		]
+	},
+	"teacher_voiceline4": {
+		"subtitle": "Teacher speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/teacher/teacher_question",
+				"stream": false
+			}
+		]
+	},
+	"tessa_voiceline1": {
+		"subtitle": "Tessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/tessa/tessa_busy",
+				"stream": false
+			}
+		]
+	},
+	"tessa_voiceline2": {
+		"subtitle": "Tessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/tessa/tessa_huh",
+				"stream": false
+			}
+		]
+	},
+	"tessa_voiceline3": {
+		"subtitle": "Tessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/tessa/tessa_human",
+				"stream": false
+			}
+		]
+	},
+	"tessa_voiceline4": {
+		"subtitle": "Tessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/tessa/tessa_humaneverywhere",
+				"stream": false
+			}
+		]
+	},
+	"tessa_voiceline5": {
+		"subtitle": "Tessa speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:murder_drones/tessa/tessa_robot",
+				"stream": false
+			}
+		]
+	},
+	"caine_voiceline1": {
+		"subtitle": "Caine speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/caine/welcome",
+				"stream": false
+			}
+		]
+	},
+	"caine_voiceline2": {
+		"subtitle": "Caine speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/caine/youparacite",
+				"stream": false
+			}
+		]
+	},
+	"caine_voiceline3": {
+		"subtitle": "Caine speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/caine/youlookconveluted",
+				"stream": false
+			}
+		]
+	},
+	"caine_voiceline4": {
+		"subtitle": "Caine speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/caine/usethesights",
+				"stream": false
+			}
+		]
+	},
+	"caine_voiceline5": {
+		"subtitle": "Caine speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/caine/shutup",
+				"stream": false
+			}
+		]
+	},
+	"npc_voiceline1": {
+		"subtitle": "NPC speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/npc/npc_ohhsay",
+				"stream": false
+			}
+		]
+	},
+	"npc_voiceline2": {
+		"subtitle": "NPC speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/npc/npc_ming",
+				"stream": false
+			}
+		]
+	},
+	"npc_voiceline3": {
+		"subtitle": "NPC speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/npc/npc_intstheprincess",
+				"stream": false
+			}
+		]
+	},
+	"npc_voiceline4": {
+		"subtitle": "NPC speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/npc/npc_hiimmingandidontreallylikewhatyourassumtionsdidtomyreputation",
+				"stream": false
+			}
+		]
+	},
+	"pomni_voiceline1": {
+		"subtitle": "Pomni speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/pomni/pomni_itabhl",
+				"stream": false
+			}
+		]
+	},
+	"pomni_voiceline2": {
+		"subtitle": "Pomni speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/pomni/pomni_tgk",
+				"stream": false
+			}
+		]
+	},
+	"pomni_voiceline3": {
+		"subtitle": "Pomni speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/pomni/pomni_unicorn",
+				"stream": false
+			}
+		]
+	},
+	"pomni_voiceline4": {
+		"subtitle": "Pomni speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/pomni/pomni_wthigo",
+				"stream": false
+			}
+		]
+	},
+	"pomni_voiceline5": {
+		"subtitle": "Pomni speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/pomni/pomni_ytmofamt",
+				"stream": false
+			}
+		]
+	},
+	"jax_voiceline1": {
+		"subtitle": "Jax speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/jax/jax_ds",
+				"stream": false
+			}
+		]
+	},
+	"jax_voiceline2": {
+		"subtitle": "Jax speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/jax/jax_iwyd",
+				"stream": false
+			}
+		]
+	},
+	"jax_voiceline3": {
+		"subtitle": "Jax speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/jax/jax_sm",
+				"stream": false
+			}
+		]
+	},
+	"jax_voiceline4": {
+		"subtitle": "Jax speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/jax/jax_www",
+				"stream": false
+			}
+		]
+	},
+	"ragatha_voiceline1": {
+		"subtitle": "Ragatha speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/ragatha/ragatha_f",
+				"stream": false
+			}
+		]
+	},
+	"ragatha_voiceline2": {
+		"subtitle": "Ragatha speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/ragatha/ragatha_gmmb",
+				"stream": false
+			}
+		]
+	},
+	"ragatha_voiceline3": {
+		"subtitle": "Ragatha speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/ragatha/ragatha_jax",
+				"stream": false
+			}
+		]
+	},
+	"ragatha_voiceline4": {
+		"subtitle": "Ragatha speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/ragatha/ragatha_keys",
+				"stream": false
+			}
+		]
+	},
+	"ragatha_voiceline5": {
+		"subtitle": "Ragatha speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/ragatha/ragatha_witsmkbh",
+				"stream": false
+			}
+		]
+	},
+	"gangle_voiceline1": {
+		"subtitle": "Gangle speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/gangle/gangle_clock",
+				"stream": false
+			}
+		]
+	},
+	"gangle_voiceline2": {
+		"subtitle": "Gangle speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/gangle/gangle_evilclone",
+				"stream": false
+			}
+		]
+	},
+	"gangle_voiceline3": {
+		"subtitle": "Gangle speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/gangle/gangle_tg",
+				"stream": false
+			}
+		]
+	},
+	"gangle_voiceline4": {
+		"subtitle": "Gangle speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/gangle/gangle_tms",
+				"stream": false
+			}
+		]
+	},
+	"gangle_voiceline5": {
+		"subtitle": "Gangle speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/gangle/gangle_trafic",
+				"stream": false
+			}
+		]
+	},
+	"zooble_voiceline1": {
+		"subtitle": "Zooble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/zooble/zooble_corn",
+				"stream": false
+			}
+		]
+	},
+	"zooble_voiceline2": {
+		"subtitle": "Zooble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/zooble/zooble_iwtaths",
+				"stream": false
+			}
+		]
+	},
+	"zooble_voiceline3": {
+		"subtitle": "Zooble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/zooble/zooble_kinger",
+				"stream": false
+			}
+		]
+	},
+	"kinger_voiceline1": {
+		"subtitle": "Kinger speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/kinger/kinger_irbyai",
+				"stream": false
+			}
+		]
+	},
+	"kinger_voiceline2": {
+		"subtitle": "Kinger speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/kinger/kinger_itiakc",
+				"stream": false
+			}
+		]
+	},
+	"kinger_voiceline3": {
+		"subtitle": "Kinger speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/kinger/kinger_jax",
+				"stream": false
+			}
+		]
+	},
+	"kinger_voiceline4": {
+		"subtitle": "Kinger speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/kinger/kinger_sniper",
+				"stream": false
+			}
+		]
+	},
+	"kinger_voiceline5": {
+		"subtitle": "Kinger speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/kinger/kinger_jax_zooblehole",
+				"stream": false
+			}
+		]
+	},
+	"bubble_voiceline1": {
+		"subtitle": "Bubble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/bubble/bubble_blahhh",
+				"stream": false
+			}
+		]
+	},
+	"bubble_voiceline2": {
+		"subtitle": "Bubble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/bubble/bubble_heavy",
+				"stream": false
+			}
+		]
+	},
+	"bubble_voiceline3": {
+		"subtitle": "Bubble speaks",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/bubble/bubble_maple",
+				"stream": false
+			}
+		]
+	},
+	"music_disc_ftige": {
+		"subtitle": "jukebox_song.chrismurderdronesmod.ftige_music_disc",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/records/ftige_music_disc",
+				"stream": true
+			}
+		]
+	},
+	"music_disc_bm": {
+		"subtitle": "jukebox_song.chrismurderdronesmod.bm_music_disc",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/records/bm_music_disc",
+				"stream": true
+			}
+		]
+	},
+	"music_disc_rts": {
+		"subtitle": "jukebox_song.chrismurderdronesmod.rts_music_disc",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/records/rts_music_disc",
+				"stream": true
+			}
+		]
+	},
+	"music_disc_forever": {
+		"subtitle": "jukebox_song.chrismurderdronesmod.forever_music_disc",
+		"sounds": [
+			{
+				"name": "chrismurderdronesmod:digital_circus/records/forever_music_disc",
+				"stream": true
+			}
+		]
+	}
+}

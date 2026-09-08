@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SBS",
+		"WIW",
+		"SBS"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:white_wool"
+		},
+		"B": {
+			"item": "minecraft:light_blue_dye"
+		},
+		"S": {
+			"item": "minecraft:string"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"id": "chrismurderdronesmod:ming",
+		"count": 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "chrismurderdronesmod:item/murder_drones/n/n",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1 }, "model": "chrismurderdronesmod:item/murder_drones/n/n_alt1" },
+    { "predicate": { "custom_model_data": 2 }, "model": "chrismurderdronesmod:item/murder_drones/n/n_alt2" },
+    { "predicate": { "custom_model_data": 3 }, "model": "chrismurderdronesmod:item/murder_drones/n/n_alt3" },
+    { "predicate": { "custom_model_data": 4 }, "model": "chrismurderdronesmod:item/murder_drones/n/n_alt4" }
+  ]
+}
