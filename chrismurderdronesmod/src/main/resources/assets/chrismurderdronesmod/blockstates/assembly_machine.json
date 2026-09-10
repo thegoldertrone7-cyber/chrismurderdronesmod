@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "chrismurderdronesmod:block/assembly_machine" },
-    "facing=east":  { "model": "chrismurderdronesmod:block/assembly_machine", "y": 90 },
-    "facing=south": { "model": "chrismurderdronesmod:block/assembly_machine", "y": 180 },
-    "facing=west":  { "model": "chrismurderdronesmod:block/assembly_machine", "y": 270 }
-  }
-}

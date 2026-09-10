@@ -1,8 +1,0 @@
-{
-  "sound_event": "chrismurderdronesmod:music_disc_rts",
-  "description": {
-    "translate": "jukebox_song.chrismurderdronesmod.rts_music_disc"
-  },
-  "length_in_seconds": 133.9,
-  "comparator_output": 11
-}

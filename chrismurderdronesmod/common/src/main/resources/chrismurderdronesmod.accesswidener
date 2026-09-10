@@ -1,8 +1,0 @@
-accessWidener	v2	named
-
-# AbstractContainerScreen.leftPos/topPos are protected in vanilla. NeoForge widens
-# them via its own getGuiLeft()/getGuiTop() patch methods; this is Fabric's
-# equivalent so common code (CreativeTabHeaderRenderer) can read a screen's
-# position without subclassing AbstractContainerScreen.
-accessible	field	net/minecraft/client/gui/screens/inventory/AbstractContainerScreen	leftPos	I
-accessible	field	net/minecraft/client/gui/screens/inventory/AbstractContainerScreen	topPos	I
